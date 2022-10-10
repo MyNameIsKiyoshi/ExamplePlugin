@@ -1,0 +1,23 @@
+#      ______                           __        ____  __            _
+#     / ____/  ______ _____ ___  ____  / /__     / __ \/ /_  ______ _(_)___
+#    / __/ | |/_/ __ `/ __ `__ \/ __ \/ / _ \   / /_/ / / / / / __ `/ / __ \
+#   / /____>  </ /_/ / / / / / / /_/ / /  __/  / ____/ / /_/ / /_/ / / / / /
+#  /_____/_/|_|\__,_/_/ /_/ /_/ .___/_/\___/  /_/   /_/\__,_/\__, /_/_/ /_/
+#                            /_/                            /____/
+# https://patorjk.com/software/taag/#p=display&c=bash&f=Slant&t=Example%20Plugin%0A
+
+Version: '${project.version}'
+
+Lang: "EN"
+
+ExampleVariable: "I Love Kiyoshi"
+
+ExampleStringList:
+  one: "One String"
+  two: "Two String"
+  three: "Three String"
+  four: 10
+
+ExampleBoolean: true
+
+ExampleInt: 10

@@ -1,0 +1,12 @@
+name: ExamplePlugin
+version: '${project.version}'
+main: com.example.exampleplugin.Main
+api-version: 1.19
+authors: [ AuthorName ]
+description: This is a description
+website: www.example.com
+commands:
+  examplecommand:
+    usage: "Use: /examplecommand"
+    description: "ExampleCommand By Kiyoshi"
+    aliases: [ excommand ]
