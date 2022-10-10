@@ -7,6 +7,5 @@ description: This is a description
 website: www.example.com
 commands:
   examplecommand:
-    usage: "Use: /examplecommand"
     description: "ExampleCommand By Kiyoshi"
     aliases: [ excommand ]
