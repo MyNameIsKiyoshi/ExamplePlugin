@@ -1,6 +1,7 @@
 package com.example.exampleplugin.commands;
 
 import com.example.exampleplugin.*;
+import com.example.exampleplugin.manager.*;
 import com.example.exampleplugin.utils.*;
 import net.minecraft.network.protocol.game.*;
 import net.minecraft.server.level.*;
@@ -12,7 +13,14 @@ import org.bukkit.entity.*;
 import javax.annotation.*;
 import java.util.*;
 
+@SuppressWarnings("ALL")
 public class ExampleCommand implements CommandExecutor, TabCompleter {
+
+    private final PluginManager pluginManager;
+
+    public ExampleCommand(PluginManager pluginManager){
+        this.pluginManager = pluginManager;
+    }
 
     /**
      * @name ExampleCommand
@@ -25,11 +33,11 @@ public class ExampleCommand implements CommandExecutor, TabCompleter {
      * @todo Go to src/main/resources and modify config.yml or en_US in /lang/en_US.yml
      * @return
      */
-    @SuppressWarnings("ALL")
+
     @Override
     public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] args) {
         if(!(sender instanceof Player)){
-            sender.sendMessage(Format.color("You must be a player to execute this command."));
+            sender.sendMessage(Format.color("&cYou must be a player to execute this command."));
             return true;
         }
 
@@ -41,7 +49,7 @@ public class ExampleCommand implements CommandExecutor, TabCompleter {
             String exampleVariableFromConfig = Main.getInstance().getConfig().getString("ExampleVariable");
             player.sendMessage(Format.rgb(79, 56, 94, "&lStrange Purple!!! " + exampleVariableFromConfig));
             player.playSound(player.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 1);
-            ep.b.a(status);
+
         } else {
             player.sendMessage(Format.color("&cYou mus be an Operator to execute this command. " + Message.ExampleMessageEN()));
             player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 100, 1);

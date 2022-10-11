@@ -1,11 +1,19 @@
 package com.example.exampleplugin.events;
 
+import com.example.exampleplugin.manager.*;
 import com.example.exampleplugin.utils.*;
 import org.bukkit.entity.*;
 import org.bukkit.event.*;
 import org.bukkit.event.player.*;
 
+@SuppressWarnings("ALL")
 public class ExampleEvent implements Listener {
+
+    private final PluginManager pluginManager;
+
+    public ExampleEvent(PluginManager pluginManager){
+        this.pluginManager = pluginManager;
+    }
 
     /**
      * @name ExampleEvent
@@ -13,7 +21,7 @@ public class ExampleEvent implements Listener {
      * @param event
      * @code {@link com.example.exampleplugin.events.ExampleEvent}
      */
-    @SuppressWarnings("ALL")
+
     @EventHandler(priority = EventPriority.LOW)
     public void onExampleEvent(PlayerJoinEvent event) {
         Player player = event.getPlayer();

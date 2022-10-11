@@ -2,6 +2,9 @@ package com.example.exampleplugin;
 
 import com.example.exampleplugin.commands.*;
 import com.example.exampleplugin.events.*;
+import com.example.exampleplugin.manager.*;
+import com.example.exampleplugin.utils.*;
+import org.bukkit.*;
 import org.bukkit.configuration.file.*;
 import org.bukkit.plugin.java.*;
 
@@ -16,6 +19,8 @@ public final class Main extends JavaPlugin {
         return instance;
     }
 
+    private PluginManager pluginManager;
+
     public void Initialize(){
         saveDefaultConfig();
         getConfig().options().parseComments(true); // use .options().copyHeader(true); in 1.16<
@@ -23,13 +28,12 @@ public final class Main extends JavaPlugin {
         instance = this;
     }
 
-    @SuppressWarnings("ConstantConditions")
     public void Commands(){
-        getCommand("examplecommand").setExecutor(new ExampleCommand());
+        getCommand("examplecommand").setExecutor(new ExampleCommand(pluginManager));
     }
 
     public void Events(){
-        getServer().getPluginManager().registerEvents(new ExampleEvent(), this);
+        getServer().getPluginManager().registerEvents(new ExampleEvent(pluginManager), this);
     }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
@@ -62,6 +66,7 @@ public final class Main extends JavaPlugin {
         Config();
         Commands();
         Events();
+        Bukkit.getLogger().info(Format.color("&a[ExamplePlugin] Enabled."));
         //todo: code here
     }
 
@@ -72,6 +77,7 @@ public final class Main extends JavaPlugin {
      */
     @Override
     public void onDisable(){
+        Bukkit.getLogger().info(Format.color("&a[ExamplePlugin] Disabling."));
         // code here
     }
 
