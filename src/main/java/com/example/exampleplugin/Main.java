@@ -7,6 +7,16 @@ import com.example.exampleplugin.utils.*;
 import org.bukkit.*;
 import org.bukkit.configuration.file.*;
 import org.bukkit.plugin.java.*;
+/**
+ * #      ______                           __        ____  __            _
+ * #     / ____/  ______ _____ ___  ____  / /__     / __ \/ /_  ______ _(_)___
+ * #    / __/ | |/_/ __ `/ __ `__ \/ __ \/ / _ \   / /_/ / / / / / __ `/ / __ \
+ * #   / /____>  </ /_/ / / / / / / /_/ / /  __/  / ____/ / /_/ / /_/ / / / / /
+ * #  /_____/_/|_|\__,_/_/ /_/ /_/ .___/_/\___/  /_/   /_/\__,_/\__, /_/_/ /_/
+ * #                            /_/                            /____/
+ * # By MyNameIsKiyoshi
+ * @code {@link com.example.exampleplugin.Main}
+ */
 
 import java.io.*;
 
