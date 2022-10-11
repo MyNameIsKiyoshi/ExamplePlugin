@@ -49,7 +49,7 @@ public class ExampleCommand implements CommandExecutor, TabCompleter {
             String exampleVariableFromConfig = Main.getInstance().getConfig().getString("ExampleVariable");
             player.sendMessage(Format.rgb(79, 56, 94, "&lStrange Purple!!! " + exampleVariableFromConfig));
             player.playSound(player.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 1);
-
+            ep.b.a(status);
         } else {
             player.sendMessage(Format.color("&cYou mus be an Operator to execute this command. " + Message.ExampleMessageEN()));
             player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 100, 1);
