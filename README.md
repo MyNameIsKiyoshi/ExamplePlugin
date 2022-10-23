@@ -6,6 +6,7 @@
 <div algin="center">
 <a align="center" class="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://www.copyrighted.com/work/1LqgloZ7BmpNtSIP"><img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="75" srcset="https://static.copyrighted.com/badges/125x75/04_2x.png 2x" src="https://static.copyrighted.com/badges/125x75/04.png" /></a>
 <div align="center">
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/MyNameIsKiyoshi/ExamplePlugin/total?color=green&label=ExamplePlugin%20Downloads&style=flat-square">
 <div align="center"> <b>✅ Example Code ✅</b> </div>
 </div>
   <a href="">
